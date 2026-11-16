@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>coach-daily</title>
+<style>
+  :root {
+    --bg: #fbfaf8; --fg: #1a1a18; --muted: #6b6a66; --rule: #e4e1da;
+    --accent: #2f6b4f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #15161a; --fg: #ececea; --muted: #9b9a96; --rule: #2a2c33;
+            --accent: #7fb79a; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+    padding: 4rem 16px;
+  }
+  main { max-width: 38rem; margin: 0 auto; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.01em; }
+  .sub { color: var(--muted); margin: 0 0 2.5rem; font-size: 1rem; }
+  h2 { font-size: 1.1rem; margin: 2.5rem 0 .6rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: .9rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  footer a { margin-right: 1rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>coach-daily</h1>
+  <p class="sub">A personal endurance-training assistant.</p>
+
+  <p>
+    coach-daily is a small, single-user program that helps one athlete train
+    for triathlon. Each morning it reads that athlete's own sleep, heart-rate
+    variability, resting heart rate and training-load data, scores it against
+    their personal baselines, and sends a short recommendation about the day's
+    session — proceed as planned, modify it, or rest.
+  </p>
+
+  <h2>What it does with Google Calendar</h2>
+  <p>
+    With the owner's permission, coach-daily writes that week's planned
+    training sessions into their own Google Calendar, and updates those events
+    when the morning recommendation changes — for example retitling a session
+    and noting why it was modified.
+  </p>
+  <ul>
+    <li>It only ever reads and writes events it created.</li>
+    <li>It acts solely on the calendar of the person who authorized it.</li>
+    <li>It does not share calendar data with anyone.</li>
+  </ul>
+
+  <h2>Who it's for</h2>
+  <p>
+    It is a personal project, not a product or a service. There are no
+    accounts, no sign-ups and no users other than its author.
+  </p>
+
+  <h2>Not medical advice</h2>
+  <p>
+    coach-daily produces training suggestions from consumer wearable data. It
+    is not a medical device and gives no medical advice. Anyone with pain,
+    illness or health concerns should consult a qualified professional.
+  </p>
+
+  <footer>
+    <a href="./privacy.html">Privacy policy</a>
+    <a href="./terms.html">Terms of service</a>
+  </footer>
+</main>
+</body>
+</html>
